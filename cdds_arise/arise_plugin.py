@@ -14,7 +14,7 @@ from typing import Type
 from cdds.common.plugins.file_info import ModelFileInfo, GlobalModelFileInfo
 from cdds.common.plugins.grid import GridLabel
 from cdds.common.plugins.models import ModelParameters
-from cdds.common.plugins.plugins import CddsPlugin
+from cdds.common.plugins.base.base_plugin import BasePlugin
 from cdds.common.plugins.common import LoadResults
 
 from cdds.common.plugins.base.base_models import BaseModelStore
@@ -27,7 +27,11 @@ import cdds.common.plugins.cmip6 as cmip6
 from cdds.common.plugins.streams import StreamInfo
 
 
-class ArisePlugin(CddsPlugin):
+ARISE_LICENSE = ('ARISE data produced by MOHC is licensed under the Open Government License v3 '
+                 '(https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)')
+
+
+class ArisePlugin(BasePlugin):
 
     def __init__(self):
         super(ArisePlugin, self).__init__("ARISE")
@@ -50,6 +54,13 @@ class ArisePlugin(CddsPlugin):
 
     def model_file_info(self) -> ModelFileInfo:
         return GlobalModelFileInfo()
+
+    def license(self) -> str:
+        return ARISE_LICENSE
+    
+    def mip_table_dir(self) -> str:
+        return '{}/mip_tables/ARISE/for_functional_tests'.format(os.environ['CDDS_ETC'])
+
 
 
 class AriseModelStore(BaseModelStore):
