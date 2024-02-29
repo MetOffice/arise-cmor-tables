@@ -1,5 +1,7 @@
+# (C) British Crown Copyright 2023-2024, Met Office.
+# Please see LICENSE.rst for license details.
 """
-A Sample module for Adding a new project to CDDS, updated for CDDS v2.2.3.
+A Sample module for Adding a new project to CDDS, updated for CDDS v3.0.0.
 
 This will require MIP tables and CVs and an appropriate request JSON file.
 
@@ -57,7 +59,7 @@ class ArisePlugin(BasePlugin):
 
     def license(self) -> str:
         return ARISE_LICENSE
-    
+
     def mip_table_dir(self) -> str:
         return '{}/mip_tables/ARISE/for_functional_tests'.format(os.environ['CDDS_ETC'])
 
