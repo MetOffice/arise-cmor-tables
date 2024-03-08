@@ -4,7 +4,9 @@ A project description and other details are available via the [wiki](https://git
 
 # UKESM1 ARISE-SAI data
 
-CMOR standardised data from the UKESM1 ARISE-SAI simulations is now available for download from the [CEDA archive](https://catalogue.ceda.ac.uk/uuid/26b89d8d76bd40bfbaf9fedfa383e9cf). JASMNIN users can also access the data directly under `/badc/deposited2022/arise/data/` which should be available from all science and transfer services.
+CMOR standardised data from the UKESM1 ARISE-SAI simulations is now available for download from the [CEDA archive](https://catalogue.ceda.ac.uk/uuid/26b89d8d76bd40bfbaf9fedfa383e9cf). JASMIN users can also access the data directly under `/badc/deposited2022/arise/data/` which should be available from all science and transfer services.
+
+This data, along with the corresponding sets from CMIP6 ScenarioMIP experiment ssp245 are also available via the [AWS open data registry](https://registry.opendata.aws/met-office-ukesm1-arise/).
 
 A searchable table describing all possible variables is available [here](https://metoffice.github.io/arise-cmor-tables/), but note that only a subset of these were produced. A list of all variables produced can be found [here](https://github.com/MetOffice/arise-cmor-tables/wiki/List-of-variables-prepared-for-ARISE).
 
