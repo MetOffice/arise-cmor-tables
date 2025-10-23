@@ -43,7 +43,7 @@ class ArisePlugin(BasePlugin):
         return models_store.get(model_id)
 
     def overload_models_parameters(self, source_dir: str) -> None:
-        models_store = AriseModelsStore.instance()
+        models_store = AriseModelStore.instance()
         models_store.overload_params(source_dir)
 
     def grid_labels(self) -> Type[GridLabel]:
@@ -76,7 +76,7 @@ class AriseModelStore(BaseModelStore):
         super(AriseModelStore, self).__init__(models_to_include)
 
     @classmethod
-    def create_instance(cls) -> 'AriseModelsStore':
+    def create_instance(cls) -> 'AriseModelStore':
         return AriseModelStore()
 
     def _load_default_params(self) -> None:
